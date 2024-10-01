@@ -2,7 +2,10 @@
 <!--프로젝트 메인 이미지-->
 ![Project Title](readme_img/members.png)
 
+<hr>
+
 <!--목차-->
+## 목차
 - [**Project**](#project)
     - [Features](#features)
     - [Techniques](#techniques)
@@ -37,25 +40,25 @@
 <hr>
 
 <!--각 페이지 설명-->
-## Page
+## **Page**
 
-### Regist Page
+### **Regist Page**
 ![Regist Page](readme_img/goodsShop_register.png)
 - **Regist Page**입니다. 해당 페이지는 초기 로드 화면으로 DB에 등록된 아이디를 통해 접속이 가능합니다.
 - 상단의 버튼을 통해 Login과 Sign up을 통해 아이디 등록 및 접속이 가능합니다.
 
-### Main Page
+### **Main Page**
 ![Main Page](readme_img/goodsShop_main.png)
 - **Main Page**입니다. 상단 멤버 전원의 이미지를 볼 수 있으며 3기 Cliche의 Group music을 들을 수 있습니다.
 - SideBar를 통해 정렬 및 검색이 가능하며 이미지 클릭으로 상세 페이지로 이동할 수 있습니다.
 - 각 굿즈 정보는 Primary key인 id로 확인 가능합니다.
 
-### Goods Detail page
+### **Goods Detail page**
 ![Goods Detail Page](readme_img/goodsShop_detail.png)
 - **Goods Detail page**입니다. Url의 id값을 통해 각 굿즈의 name, date, production, price를 적용합니다.
 - 해당 제품의 상세 정보, 배송, 반품 및 교환에 관한 정보를 얻을 수 있습니다.
 
-### Comunity Page
+### **Comunity Page**
 ![Comunity Page](readme_img/goodsShop_comunity.png)
 -  **Comunity Page**입니다. Bootstrap을 통해 디자인하였습니다.
 - 각 게시판의 정보는 Primary key의 id로 구성되며 password_hash를 이용해 단방향 암호화를 적용하였습니다.
@@ -71,6 +74,6 @@ preg_match_all("/<img[^>]*src=[\"']?([^>\"']+)[\"']?[^>]*>/i", $content, $matche
 <hr>
 
 <!--접근-->
-## Contact
+## **Contact**
 - 📧  **wodnd565@gmail.com**
 - 📞  **010 - 5657 - 4813**
