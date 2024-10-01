@@ -1,0 +1,73 @@
+-- 테이블 구조 `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `username` varchar(25) NOT NULL,
+  `firstName` varchar(50) NOT NULL,
+  `lastName` varchar(50) NOT NULL,
+  `email` varchar(200) NOT NULL,
+  `password` varchar(32) NOT NULL,
+  `signUpDate` datetime NOT NULL,
+  `profilePic` varchar(500) NOT NULL,
+  `Admin_num` int(4) DEFAULT NULL
+);
+
+INSERT INTO `users` (`id`, `username`, `firstName`, `lastName`, `email`, `password`, `signUpDate`, `profilePic`, `Admin_num`) VALUES
+(1, '12345', '1234', '1234', '1234@gmail.com', '827ccb0eea8a706c4c34a16891f84e7b', '2023-11-12 00:00:00', 'assets/images/profile-pics/head_emerald.png', 1),
+(11, '77777', '77777', '77777', '77777@gmail.com', '22a4d9b04fe95c9893b41e2fde83a427', '2023-11-25 00:00:00', 'assets/images/profile-pics/head_emerald.png', 2);
+
+-- 테이블 goods
+CREATE TABLE goods (
+	id int(11) not null AUTO_INCREMENT,
+    name varchar(255) DEFAULT '',
+    img varchar(255) DEFAULT '',
+    price int(11) DEFAULT 0,
+    production varchar(255) DEFAULT null,
+    sales int(11) DEFAULT null,
+    date datetime,
+    PRIMARY KEY(id)
+);
+
+INSERT INTO goods (name, img, price, production, sales, detailImg, date) VALUES 
+('keycap_kanna', 'source/img/goods/keycap_kanna.jpg', 65000, 'A', 150, 'source/img/goods_detail/keycap_kanna_detail.png', '2024-08-20 12:00:00'),
+('keycap_yuni', 'source/img/goods/keycap_yuni.jpg', 65000, 'A', 150, 'source/img/goods_detail/keycap_yuni_detail.png','2024-08-20 12:00:00'),
+('keycap_hina', 'source/img/goods/keycap_hina.jpg', 65000, 'A', 150, 'source/img/goods_detail/keycap_hina_detail.png','2024-08-20 12:00:00'),
+('keycap_mashiro', 'source/img/goods/keycap_mashiro.jpg', 65000, 'A', 150, 'source/img/goods_detail/keycap_mashiro_detail.png','2024-08-20 12:00:00'),
+('keycap_rize', 'source/img/goods/keycap_rize.jpg', 65000, 'A', 150, 'source/img/goods_detail/keycap_rize_detail.png','2024-08-20 12:00:00'),
+('keycap_tabi', 'source/img/goods/keycap_tabi.jpg', 65000, 'A', 150, 'source/img/goods_detail/keycap_tabi_detail.png','2024-08-20 12:00:00'),
+
+('stell_passport', 'source/img/goods/stell_passport.jpg', 8000, 'B', 150, 'source/img/goods_detail/stell_passport_detail.png','2024-02-14 12:00:00'),
+('universe_special', 'source/img/goods/universe_special.jpg', 28000, 'C', 150, 'source/img/goods_detail/universe_special_detail.png','2024-06-10 12:00:00'),
+
+('tabi_cup', 'source/img/goods/tabi_cup.jpg', 25000, 'D', 150, 'source/img/goods_detail/tabi_cup_detail.png','2024-09-07 12:00:00'),
+('tabi_keycap', 'source/img/goods/tabi_keycap.jpg', 30000, 'D', 150, 'source/img/goods_detail/tabi_keycap_detail.png','2024-09-07 12:00:00'),
+('tabi_keyring', 'source/img/goods/tabi_keyring.jpg', 15000, 'D', 150, 'source/img/goods_detail/tabi_keyring_detail.png','2024-09-07 12:00:00'),
+('tabi_pennel', 'source/img/goods/tabi_pennel.jpg', 30000, 'D', 150, 'source/img/goods_detail/tabi_pennel_detail.png','2024-09-07 12:00:00'),
+('tabi_voice', 'source/img/goods/tabi_voice.jpg', 8000, 'D', 150, 'source/img/goods_detail/tabi_voice_detail.png','2024-09-07 12:00:00'),
+('tabi_special', 'source/img/goods/tabi_special.jpg', 100000, 'D', 150, 'source/img/goods_detail/tabi_special_detail.png','2024-09-07 12:00:00'),
+
+('nana_band', 'source/img/goods/nana_band.jpg', 12500, 'F', 150, 'source/img/goods_detail/nana_band_detail.png','2024-08-07 12:00:00'),
+('nana_canbedge', 'source/img/goods/nana_canbet.jpg', 5000, 'F', 150, 'source/img/goods_detail/nana_canbet_detail.png','2024-08-07 12:00:00'),
+('nana_card', 'source/img/goods/nana_card.jpg', 30000, 'F', 150, 'source/img/goods_detail/nana_card_detail.png','2024-08-07 12:00:00'),
+('nana_cup', 'source/img/goods/nana_cup.jpg', 32000, 'F', 150, 'source/img/goods_detail/nana_cup_detail.png','2024-08-07 12:00:00'),
+('nana_voice', 'source/img/goods/nana_voice.jpg', 8000, 'F', 150, 'source/img/goods_detail/nana_voice_detail.png','2024-08-07 12:00:00'),
+('nana_stand', 'source/img/goods/nana_stand.jpg', 27000, 'F', 150, 'source/img/goods_detail/nana_stand_detail.png','2024-08-07 12:00:00'),
+('nana_special', 'source/img/goods/nana_special.jpg', 106500, 'F', 150, 'source/img/goods_detail/nana_special_detail.png','2024-08-07 12:00:00');
+
+-- freeboard
+
+CREATE TABLE freeboard(
+	idx int unsigned not null AUTO_INCREMENT,
+  code varchar(20) DEFAULT '',
+  subject varchar(255) DEFAULT '',
+  name varchar(100) DEFAULT '',
+  content mediumtext,
+  hit int DEFAULT 0,
+  rdate datetime,
+  ip varchar(100),
+  PRIMARY KEY(idx)
+);
+
+ALTER TABLE freeboard add column imglist varchar(255) DEFAULT '' AFTER hit;
+ALTER TABLE freeboard ADD COLUMN password varchar(255) AFTER imglist;
